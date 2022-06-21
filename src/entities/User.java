@@ -1,6 +1,7 @@
 package entities;
 
-public class User extends TestSPID{
+public class User extends Base {
+
     private long id;
     private String name;
     private String surname;
@@ -10,11 +11,29 @@ public class User extends TestSPID{
     }
 
     public User(long id, String name, String surname, String username) {
-        this.id = id;
+        super(id, null, null);
         this.name = name;
         this.surname = surname;
         this.username = username;
     }
+
+
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
 
     public void setId(long id) {
         this.id = id;
@@ -32,19 +51,4 @@ public class User extends TestSPID{
         this.username = username;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public String getUsername() {
-        return username;
-    }
 }
